@@ -5,12 +5,12 @@
   --sans-serif: "Poppins", sans-serif;
 
   /* Colors */
-  --primary: #85c226;
-  --secondary: #03a2b7;
+  --primary: #9575cd;
+  --secondary: #66bb6a;
   --light: #ffffff;
   --light-alt: #eff4f7;
-  --dark: #072d30;
-  --dark-alt: #1a1a24;
+  --dark: #000000;
+  --dark-alt: #171717;
 
   /* Shadow */
   --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -21,6 +21,7 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  line-height: 100%;
 }
 *::selection {
   background: var(--dark);
@@ -135,4 +136,92 @@ p {
 .button:hover {
   color: var(--light);
   background: var(--primary);
+}
+
+/* Main Styles */
+.app {
+  position: relative;
+  background-color: var(--dark-alt);
+  width: 100%;
+  min-height: 100vh;
+}
+.container {
+  min-width: 60%;
+  max-width: 720px;
+  margin: auto;
+  padding: 50px 0;
+}
+.card {
+  width: 100%;
+  background-color: var(--dark);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  color: #ffffff;
+}
+.card .card-body {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Expenses */
+.expenses .card-body {
+  flex-direction: column;
+}
+.expenses .item {
+  background-color: var(--dark-alt);
+}
+.expenses .item .card-body {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.expenses .item .date {
+  border-radius: 5px;
+  width: 100px;
+  border: 2px solid #fff3;
+  background-color: var(--dark);
+  box-shadow: var(--shadow);
+  padding: 15px;
+  text-align: center;
+}
+.expenses .item .date h5 {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--light);
+  line-height: 100%;
+  margin-bottom: 7px;
+}
+.expenses .item .date h6 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--light-alt);
+  line-height: 130%;
+  opacity: 0.5;
+}
+.expenses .item .info {
+  width: calc(100% - 115px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.expenses .item .info .title {
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--light);
+  text-transform: capitalize;
+}
+.expenses .item .info .price {
+  background-color: var(--primary);
+  border-radius: 5px;
+  border: 2px solid var(--light);
+  box-shadow: var(--shadow);
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--light);
 }
