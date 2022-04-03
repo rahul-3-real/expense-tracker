@@ -225,3 +225,44 @@ p {
   font-weight: 600;
   color: var(--light);
 }
+
+/* Add Expense */
+.add-expense {
+  background-color: var(--primary);
+  margin-bottom: 30px;
+}
+.add-expense form {
+  width: 100%;
+}
+.add-expense form .controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.add-expense form .controls label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+  display: block;
+  margin-bottom: 5px;
+}
+.add-expense form .controls input {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--light);
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+.add-expense form button {
+  padding: 13px 20px;
+  background-color: var(--dark);
+  border: 0;
+  outline: 0;
+  color: var(--light);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
