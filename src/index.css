@@ -168,16 +168,18 @@ p {
 }
 
 /* Expenses */
-.expenses .card-body {
+.expenses .card-body ul {
+  width: 100%;
+  display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.expenses .card-body ul li {
+  width: 100%;
 }
 .expenses .item {
   background-color: var(--dark-alt);
-}
-.expenses .item .card-body {
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 20px;
 }
 .expenses .item .date {
   border-radius: 5px;
@@ -229,7 +231,7 @@ p {
 /* Add Expense */
 .add-expense {
   background-color: var(--primary);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .add-expense form {
   width: 100%;
@@ -254,7 +256,7 @@ p {
   outline: 0;
   border-radius: 5px;
 }
-.add-expense form button {
+.add-expense button {
   padding: 13px 20px;
   background-color: var(--dark);
   border: 0;
@@ -263,6 +265,63 @@ p {
   font-size: 16px;
   font-weight: 500;
   border-radius: 5px;
-  margin-top: 10px;
+  margin: 10px 10px 0 0;
   cursor: pointer;
+}
+
+/* Filter */
+.filter {
+  margin-bottom: 20px;
+}
+.filter .card-body {
+  justify-content: space-between;
+}
+.filter .card-body label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--light);
+  display: block;
+  margin-bottom: 5px;
+}
+.filter .card-body select {
+  padding: 10px 15px;
+  background-color: var(--light);
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Chart */
+.chart {
+  margin-bottom: 20px;
+}
+.chart .card-body {
+  justify-content: space-between;
+}
+.chart .bar .inner {
+  width: 13px;
+  height: 100px;
+  background-color: var(--dark-alt);
+  border: 1px solid #2f2541;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2px;
+}
+.chart .bar .inner .fill {
+  width: 100%;
+  background-color: var(--primary);
+  border-radius: 10px;
+  transition: 0.5s ease all;
+}
+.chart .bar label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--light-alt);
+  opacity: 0.7;
 }
